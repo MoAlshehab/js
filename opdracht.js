@@ -19,13 +19,18 @@ mo('Ali','')*/
 
 function buttonClick(){
     alert("Er is op de knop geklikt....");
+
+}
+function berekenBtw(bedragExBtw){
+    alert (bedragExBtw * 0.21);
 }
 /*
 function berekenBtw(bedragExBtw){
     console.log(bedragExBtw *0.21)
 }
 berekenBtw(150)*/
+/*
 function berekenBtw(bedragExBtw){
     return bedragExBtw  * 0.21;
 }
- berekenBtw(100);
+ berekenBtw(100);*/
