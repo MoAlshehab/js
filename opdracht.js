@@ -1,5 +1,4 @@
 alert("Hello world")
-document.write ("Deltion college")
 confirm("het is oke we gaan het zien ")
 prompt("Wat is uw leeftijd? ")
 
@@ -18,12 +17,13 @@ mo('Mo','Alshehab')
 mo('Ali','')*/
 
 function buttonClick(){
-    alert("Er is op de knop geklikt....");
+    aler("Er is op de knop geklikt....");
 
 }
 function berekenBtw(bedragExBtw){
     alert (bedragExBtw * 0.21);
 }
+berekenBtw(50);
 /*
 function berekenBtw(bedragExBtw){
     console.log(bedragExBtw *0.21)
