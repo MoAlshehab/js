@@ -35,7 +35,7 @@ Kies
 <button onclick="speel()">Speel</button>
 <br>
 
-  JIJ <h1 id="b">0</h1>
+  Jij <h1 id="b">0</h1>
   <br>
  Computer <h1 id="c">0</h1>
  <script type="text/javascript">
@@ -52,14 +52,24 @@ i=Math.floor(Math.random()*3);
     if(i==2)
     computer="schaar";
 
-    if(speeler=="papier" && computer=="steen" || speeler=="steen" && computer=="schaar" ){
+    if(speeler=="papier" && computer=="steen" || speeler=="steen" && computer=="schaar" || speeler=="schaar" && computer=="papier" ){
     alert("jij hebt gewonnen 😍");
     w++;
     document.getElementById('b').innerHTML=w;
 }
- else if (speeler==computer){
+
+else if (speeler==computer){
     alert("gelijk 🤣");
 }
+else if(w==2){
+    document.write("jij bent de winaar van deze potje👏")
+}
+
+else if(o==2){
+    document.write("De computer is gewonnen 💻")
+}
+
+
 else{
     alert("verloor😢");
     o++;
