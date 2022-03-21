@@ -17,7 +17,7 @@ mo('Mo','Alshehab')
 mo('Ali','')*/
 
 function buttonClick(){
-    aler("Er is op de knop geklikt....");
+    alert("Er is op de knop geklikt....");
 
 }
 function berekenBtw(bedragExBtw){

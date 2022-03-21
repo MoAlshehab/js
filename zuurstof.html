@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+ <html lang="nl">
+ <head>
+
+ <meta charset="UTF-8">
+ <title>Interactieve HTML</title>
+ <style>
+     div.a{
+         padding-left: 450px;
+         background-color: brown;
+     }
+ </style>
+ <div>
+ <script>
+ function checkForm(){
+ let getal = document.getElementById("getal").value *1;
+ let getal1 = document.getElementById("getal1").value*1;
+ let getal2 = document.getElementById("getal2").value*1;
+ 
+document.write( getal * getal1 / getal2);
+ } 
+ </script>
+ </head>
+
+ <body>
+     <div class="a">
+ <h1>Zuurstof bereken</h1>
+ <br />
+ <label for="getal">L:</label><br>
+ <input type="number" id="getal" name="getal"><br>
+ <br />
+ <label for="getal1">B:</label><br>
+ <input type="number" id="getal1" name="getal1"><br>
+ <br />
+ <label for="getal2">LPM:</label><br>
+ <input type="number" id="getal2" name="getal2"><br>
+ <br /> 
+ <input type="button" value="bereken"
+ onclick="checkForm()" />
+
+ </body>
+ </html>
