@@ -14,7 +14,7 @@
             width: 100px;
             height: 100px;
         }
-        body{
+      body{
         
             font-size: 25px;
             color:yellowgreen;
@@ -32,15 +32,25 @@ Kies
         <option value="papier">Papier🖐</option>
         <option value="schaar">Schaar ✌</option>
     </select>
-<button onclick="speel()">Speel</button>
+<button id="knop" onclick="speel()">Speel</button>
 <br>
 
   Jij <h1 id="b">0</h1>
   <br>
  Computer <h1 id="c">0</h1>
+  totaal<h1 id="winaar"></h1>
+  <h1 id="computer"></h1>
+  <button id="opnieuw" disabled = "true" onclick="opnieuw()">Opnieuw</button>
  <script type="text/javascript">
 w=0;
 o=0;
+
+function jijHebtGewonnen(){
+    alert("jij hebt gewonnen 😍");
+    w++;
+    document.getElementById('b').innerHTML=w;
+}
+
 function speel(){
 i=Math.floor(Math.random()*3);
     computer="";
@@ -53,20 +63,28 @@ i=Math.floor(Math.random()*3);
     computer="schaar";
 
     if(speeler=="papier" && computer=="steen" || speeler=="steen" && computer=="schaar" || speeler=="schaar" && computer=="papier" ){
-    alert("jij hebt gewonnen 😍");
-    w++;
-    document.getElementById('b').innerHTML=w;
+        jijHebtGewonnen();
 }
 
 else if (speeler==computer){
     alert("gelijk 🤣");
 }
-else if(w==2){
-    document.write("jij bent de winaar van deze potje👏")
+else if(w>2){
+    jijHebtGewonnen();
+    document.getElementById("winaar").innerHTML="jij bent de winaar van deze potje👏";
+   document.getElementById("knop").disabled = true;
+   document.getElementById("opnieuw").disabled = false;
+    
 }
 
-else if(o==2){
-    document.write("De computer is gewonnen 💻")
+
+else if(o>2){
+    alert("computer heeft gewonnen");
+    o++;
+    document.getElementById('c').innerHTML=o;
+    document.getElementById("computer").innerHTML="De computer is gewonnen 💻";
+    document.getElementById("knop").disabled = true;
+    document.getElementById("opnieuw").disabled = false;
 }
 
 
@@ -75,6 +93,10 @@ else{
     o++;
     document.getElementById('c') .innerHTML=o;
 }
+
+}
+function opnieuw(){
+    location.href = location.href;
 }
  </script>
 </body>
