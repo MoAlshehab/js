@@ -16,8 +16,9 @@
  let getal = document.getElementById("getal").value *1;
  let getal1 = document.getElementById("getal1").value*1;
  let getal2 = document.getElementById("getal2").value*1;
- 
-document.write( getal * getal1 / getal2);
+ document.getElementById("totaal").innerHTML= getal * getal1 / getal2;
+//document.write( getal * getal1 / getal2);
+
  } 
  </script>
  </head>
@@ -37,6 +38,7 @@ document.write( getal * getal1 / getal2);
  <br /> 
  <input type="button" value="bereken"
  onclick="checkForm()" />
+ <h1 id="totaal"></h1>
 
  </body>
  </html>
