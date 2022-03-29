@@ -23,7 +23,7 @@ function buttonClick(){
 function berekenBtw(bedragExBtw){
     alert (bedragExBtw * 0.21);
 }
-berekenBtw(50);
+berekenBtw(1000);
 /*
 function berekenBtw(bedragExBtw){
     console.log(bedragExBtw *0.21)

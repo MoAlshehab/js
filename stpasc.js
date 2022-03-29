@@ -26,27 +26,27 @@ i=Math.floor(Math.random()*3);
 else if (speeler==computer){
     alert("gelijk 🤣");
 }
-else if(w>2){
+else if(w==2){
     jijHebtGewonnen();
-    document.getElementById("winaar").innerHTML="jij bent de winaar van deze potje👏";
+    document.getElementById("winnaar").innerHTML="jij bent de winnaar van dit potje👏";
    document.getElementById("knop").disabled = true;
    document.getElementById("opnieuw").disabled = false;
     
 }
 
 
-else if(o>2){
+else if(o==2){
     alert("computer heeft gewonnen");
     o++;
     document.getElementById('c').innerHTML=o;
-    document.getElementById("computer").innerHTML="De computer is gewonnen 💻";
+    document.getElementById("computer").innerHTML="De computer heeft gewonnen 💻";
     document.getElementById("knop").disabled = true;
     document.getElementById("opnieuw").disabled = false;
 }
 
 
 else{
-    alert("verloor😢");
+    alert("jammer jij hebt verloren😢");
     o++;
     document.getElementById('c') .innerHTML=o;
 }
