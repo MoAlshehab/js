@@ -1,0 +1,44 @@
+body{
+ background-color: black; 
+color: rgb(6, 245, 58);
+font-size: large;
+font-style: inherit;
+text-align: center;
+}
+
+
+   h1{
+        text-align: center;
+        font-family: verdana;
+        font-size:25px;
+        color:#ec0d0d;
+    }
+    .memoryContainer{
+        width:1000px;
+        height: 600px;
+        border:1px solid #E9E9E9;
+        margin: auto;
+        background-color:#969797;
+    }
+    .memoryCard, .memoryCard:disabled{
+        width: 181px;
+        height:100px;
+        background-image:url("fotos/wv1.jpg");
+        margin:10px;
+        border:1px solid #f70404;
+        float:center;
+        cursor:pointer;
+        font-size:25px;
+        font-weight:bold;
+        color:#FFFFFF;
+
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+    }
+    button:disabled,
+    button[disabled]{
+      border: 5px solid #999999;
+      background-color: #cccccc;
+      color: #FFFFFF;
+    }
+    

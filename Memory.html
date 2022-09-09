@@ -1,91 +1,46 @@
- <html>
- <head>
- <title>Simple Memory</title>
- <style>
- h1 {
- text-align: center;
- font-family: verdana;
-font-size: 25px;
- color: white;
- }
- .memoryContainer {
- width: 240px;
- height: 325px;
- border: 1px solid #E9E9E9;
- margin: auto;
- background-color: #666;
- }
- .memoryCard{
- width:100px;
- height: 100px;
- background-color: #0099FF;
- margin:10px;
- border:1px solid #999999;
- font-size:25px;
- font-weight:bold;
- color:white;
- float:left;
- }
- </style>
- <script>
- var userClick1 = 0;
- var userClick2 = 0;
- var userSelectedCard1 = "";
- var userSelectedCard2 = "";
- function checkClickedCard(cardNum, cardId){
- //Geklikte kaart disablen, want je mag maar een
- //keer op dezelfde kaart klikken
- document.getElementById(cardId).disabled = true;
- //juiste waarde op de kaart zetten
+<html>
+<head>
+    <title>Simple memory</title>
 
- document.getElementById(cardId).value = cardNum;
- //document.getElementById(cardId).style = "
- background: url(myimage.png);
-
- //Lees en onthoudt klik1 en klik2
- if(userClick1==0){
- userClick1 = cardNum;
- userSelectedCard1 = cardId;
- }else{
- userClick2 = cardNum;
- userSelectedCard2 = cardId;
- }
-
- if(userClick2!=0){
- if(userClick1==userClick2){
- alert("Goed zo...");
- }else{
- alert("Fout...");
- document.getElementById(userSelectedCard1).
- disabled = false;
- document.getElementById(userSelectedCard2).
- disabled = false;
- document.getElementById(userSelectedCard1).
- value = "";
-document.getElementById(userSelectedCard2).
-value = "";
- }
-
- userClick1 = 0;
- userClick2 = 0;
- }
- }
-
- </script>
- </head>
- <body>
+<link rel="stylesheet" type="text/css" href="memory.css">
+</head>
+<body onload="shuffleCards();">
 
 <div class="memoryContainer">
- <h1>Memory</h1>
- <input type="button" value="" id="kaart1" class="
- memoryCard" onclick="checkClickedCard(1, kaart1);" />
-<input type="button" value="" id="kaart2" class="
-memoryCard" onclick="checkClickedCard(2, kaart2);"/>
- <input type="button" value="" id="kaart3" class="
- memoryCard" onclick="checkClickedCard(1,kaart3);"/>
- <input type="button" value="" id="kaart4" class="
- memoryCard" onclick="checkClickedCard(2, kaart4);"/>
- </div>
-
- </body>
- </html>
+    <h1>Memory</h1>
+    <div id="memoryCards">
+    <!-- <img src="sps.jpg"  width="200" height="150"> -->
+    <!-- <input  type="button"  value="" id="kaart1" class="memoryCard" onclick="checkClickedCard(1, 'kaart1');" />
+    <input  type="button" value="" id="kaart2" class="memoryCard" onclick="checkClickedCard(2, 'kaart2');" />
+    <input type="button" value="" id="kaart3" class="memoryCard" onclick="checkClickedCard(1, 'kaart3');" />
+    <input type="button" value="" id="kaart4" class="memoryCard" onclick="checkClickedCard(2, 'kaart4');" />
+    <input type="button" value="" id="kaart5" class="memoryCard" onclick="checkClickedCard(3, 'kaart5');" />
+    <input type="button" value="" id="kaart6" class="memoryCard" onclick="checkClickedCard(4, 'kaart6');" />
+    <input type="button" value="" id="kaart7" class="memoryCard" onclick="checkClickedCard(3, 'kaart7');" />
+    <input type="button" value="" id="kaart8" class="memoryCard" onclick="checkClickedCard(4, 'kaart8');" />
+    <input type="button" value="" id="kaart9" class="memoryCard" onclick="checkClickedCard(5, 'kaart9');" />
+    <input type="button" value="" id="kaart10" class="memoryCard" onclick="checkClickedCard(6, 'kaart10');" />
+    <input type="button" value="" id="kaart11" class="memoryCard" onclick="checkClickedCard(7, 'kaart11');" />
+    <input type="button" value="" id="kaart12" class="memoryCard" onclick="checkClickedCard(6, 'kaart12');" />
+    <input type="button" value="" id="kaart13" class="memoryCard" onclick="checkClickedCard(7, 'kaart13');" />
+    <input type="button" value="" id="kaart14" class="memoryCard" onclick="checkClickedCard(8, 'kaart14');" />
+    <input type="button" value="" id="kaart15" class="memoryCard" onclick="checkClickedCard(5, 'kaart15');" />
+    <input type="button" value="" id="kaart16" class="memoryCard" onclick="checkClickedCard(8, 'kaart16');" /> -->
+</div>
+</div>
+<audio id="geluid">
+    <source src="geluid.wav" type="audio/mpeg">
+</audio>
+<audio id="goed">
+    <source src="goed.wav" type="audio/mpeg">
+</audio>
+<audio id="klik">
+    <source src="klik.wav" type="audio/mpeg">
+</audio>
+ <div id="teller">
+        <h2>Aantal keer gespeeld:</h2>
+        <div id="atk">0</div>
+    </div>
+    <script src="memory.js"></script>
+</body>
+</html
